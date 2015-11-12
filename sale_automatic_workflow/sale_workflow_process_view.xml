@@ -60,8 +60,13 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
+        
+        <!-- Sale Automatic Workflow menu settings -->
+        <menuitem name="Connector - Sale Automatic Workflow"
+                 id="root_menu_base_connector_sale_automatic_workflow"
+                 groups="base.group_sale_salesman,base.group_sale_manager" parent="base.menu_config" sequence="10" />
 
-        <menuitem action="act_sale_workflow_process_form" id="menu_act_sale_workflow_process_form" parent="base.menu_sale_config_sales" sequence="20"/>
+        <menuitem action="act_sale_workflow_process_form" id="menu_act_sale_workflow_process_form" parent="root_menu_base_connector_sale_automatic_workflow" sequence="20"/>
 
     </data>
 </openerp>
